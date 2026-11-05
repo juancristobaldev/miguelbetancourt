@@ -58,6 +58,7 @@
   function initMobileMenu() {
     const header = document.querySelector('.header');
     const toggleBtn = document.querySelector('.nav-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
     const mobileLinks = document.querySelectorAll('.mobile-nav-link');
     const mobileCtaBtn = document.querySelector('.mobile-nav-cta .btn');
 
@@ -66,12 +67,14 @@
     const openMenu = () => {
       header.classList.add('mobile-open');
       document.body.classList.add('menu-open');
+      if (mobileNav) mobileNav.classList.add('is-open');
       toggleBtn.setAttribute('aria-expanded', 'true');
     };
 
     const closeMenu = () => {
       header.classList.remove('mobile-open');
       document.body.classList.remove('menu-open');
+      if (mobileNav) mobileNav.classList.remove('is-open');
       toggleBtn.setAttribute('aria-expanded', 'false');
     };
 

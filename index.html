@@ -59,32 +59,32 @@
         </svg>
       </button>
     </div>
+  </header>
 
-    <!-- Mobile Nav Overlay -->
-    <div id="mobile-nav" class="mobile-nav-overlay" aria-label="Menú móvil">
-      <div class="mobile-nav-content">
-        <a href="#servicios" class="mobile-nav-link" style="transition-delay: 100ms;">Servicios</a>
-        <a href="#fugas" class="mobile-nav-link" style="transition-delay: 150ms;">Fugas</a>
-        <a href="#informes" class="mobile-nav-link" style="transition-delay: 200ms;">Informes</a>
-        <a href="#respaldo" class="mobile-nav-link" style="transition-delay: 250ms;">Respaldo</a>
-        <a href="#contacto" class="mobile-nav-link" style="transition-delay: 300ms;">Contacto</a>
-        <div class="mobile-nav-cta" style="transition-delay: 400ms;">
-          <button 
-            type="button" 
-            class="btn btn-primary btn-full btn-lg" 
-            data-whatsapp="Hola Miguel Ángel, vengo desde tu sitio web y quisiera solicitar una cotización."
-          >
-            <span>Solicitar Cotización</span>
-            <!-- Icon ArrowRight -->
-            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M5 12h14"></path>
-              <path d="m12 5 7 7-7 7"></path>
-            </svg>
-          </button>
-        </div>
+  <!-- Mobile Nav Overlay (Outside header to prevent stacking context & backdrop-filter containment) -->
+  <div id="mobile-nav" class="mobile-nav-overlay" aria-label="Menú móvil">
+    <div class="mobile-nav-content">
+      <a href="#servicios" class="mobile-nav-link" style="transition-delay: 100ms;">Servicios</a>
+      <a href="#fugas" class="mobile-nav-link" style="transition-delay: 150ms;">Fugas</a>
+      <a href="#informes" class="mobile-nav-link" style="transition-delay: 200ms;">Informes</a>
+      <a href="#respaldo" class="mobile-nav-link" style="transition-delay: 250ms;">Respaldo</a>
+      <a href="#contacto" class="mobile-nav-link" style="transition-delay: 300ms;">Contacto</a>
+      <div class="mobile-nav-cta" style="transition-delay: 400ms;">
+        <button 
+          type="button" 
+          class="btn btn-primary btn-full btn-lg" 
+          data-whatsapp="Hola Miguel Ángel, vengo desde tu sitio web y quisiera solicitar una cotización."
+        >
+          <span>Solicitar Cotización</span>
+          <!-- Icon ArrowRight -->
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </button>
       </div>
     </div>
-  </header>
+  </div>
 
   <!-- =========================================================================
        MAIN CONTENT

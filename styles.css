@@ -286,7 +286,7 @@ button, input, select, textarea {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 50;
+  z-index: 70;
   background-color: transparent;
   padding: 1.5rem 0;
   border-bottom: 1px solid transparent;
@@ -303,6 +303,14 @@ button, input, select, textarea {
   border-bottom-color: var(--color-border-subtle);
   padding: 0.75rem 0;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+}
+
+.header.mobile-open {
+  background-color: transparent !important;
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
 .header-inner {
@@ -429,17 +437,21 @@ button, input, select, textarea {
 .mobile-nav-overlay {
   position: fixed;
   inset: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
   background-color: rgba(16, 18, 20, 0.98);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  z-index: 55;
+  z-index: 60;
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--transition-smooth);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2rem;
+  padding: 6rem 2rem 2rem 2rem;
+  overflow-y: auto;
 }
 
 @media (min-width: 1024px) {
@@ -448,7 +460,8 @@ button, input, select, textarea {
   }
 }
 
-.header.mobile-open .mobile-nav-overlay {
+.mobile-nav-overlay.is-open,
+body.menu-open .mobile-nav-overlay {
   opacity: 1;
   pointer-events: auto;
 }
@@ -456,7 +469,10 @@ button, input, select, textarea {
 .mobile-nav-content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.75rem;
+  max-width: 24rem;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .mobile-nav-link {
@@ -464,7 +480,7 @@ button, input, select, textarea {
   font-weight: 900;
   color: var(--color-text-white);
   transition: all 0.5s var(--ease-premium);
-  transform: translateY(2rem);
+  transform: translateY(1.5rem);
   opacity: 0;
 }
 
@@ -472,19 +488,21 @@ button, input, select, textarea {
   color: var(--color-yellow);
 }
 
-.header.mobile-open .mobile-nav-link {
+.mobile-nav-overlay.is-open .mobile-nav-link,
+body.menu-open .mobile-nav-link {
   transform: translateY(0);
   opacity: 1;
 }
 
 .mobile-nav-cta {
-  padding-top: 2rem;
-  transform: translateY(2rem);
+  padding-top: 1.5rem;
+  transform: translateY(1.5rem);
   opacity: 0;
   transition: all 0.5s var(--ease-premium);
 }
 
-.header.mobile-open .mobile-nav-cta {
+.mobile-nav-overlay.is-open .mobile-nav-cta,
+body.menu-open .mobile-nav-cta {
   transform: translateY(0);
   opacity: 1;
 }
